@@ -1,21 +1,22 @@
 %global octpkg mvn
 
 Summary:	Multivariate normal distribution clustering and utility functions
-Name:		octave-%{octpkg}
+Name:		octave-mvn
 Version:	1.1.0
-Release:	1
-Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
+Release:	2
 License:	GPLv3+
 Group:		Sciences/Mathematics
-Url:		https://packages.octave.org/%{octpkg}/
-BuildArch:	noarch
+Url:		https://packages.octave.org/mvn/
+Source0:	https://downloads.sourceforge.net/octave/mvn-%{version}.tar.gz
 
-BuildRequires:	octave-devel >= 3.6.0
+BuildRequires:  octave-devel >= 3.6.0
 
 Requires:	octave(api) = %{octave_api}
 
 Requires(post): octave
 Requires(postun): octave
+
+BuildArch:	noarch
 
 %description
 Multivariate normal distribution clustering and utility functions.
@@ -30,9 +31,6 @@ Multivariate normal distribution clustering and utility functions.
 
 %prep
 %autosetup -p1 -n %{octpkg}
-
-# remove backup files
-#find . -name \*~ -delete
 
 %build
 %octave_pkg_build
