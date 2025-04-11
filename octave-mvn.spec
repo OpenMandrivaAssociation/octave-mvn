@@ -3,7 +3,7 @@
 Summary:	Multivariate normal distribution clustering and utility functions
 Name:		octave-mvn
 Version:	1.1.0
-Release:	2
+Release:	3
 License:	GPLv3+
 Group:		Sciences/Mathematics
 Url:		https://packages.octave.org/mvn/
